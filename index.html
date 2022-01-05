@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Trivia, pre-admisiòn</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Lobster&family=Montserrat:wght@500&display=swap"
+	 rel="stylesheet">
+</head>
+
+<body>
+	<main>
+		<h1>Trivia Laboratorian</h1>
+		<section id="pantalla1" class="inicio">
+			<div id="content">
+				<p id="about"> Primero, dinos tu nombre...</p>
+				<form id="form-name">
+					<label id="label-name">
+              <input type="text" id="name" placeholder="Escribe tu nombre aquì :)"> 
+            </label>
+          </form> 
+            <!--Coloca la caja para datos-->
+        <button onclick="showTrivias()" id="start">Continuar</button><br> 
+      </div>
+    </section>
+
+    <section id="pantalla2" class="trivias">
+      <h1>¡A jugar!</h1><br>
+        <p id="name2">
+           <!-- Aqui irà el innerHTML -->
+        </p><br>
+        <button onclick="goToTrivia1()" id="btn-trivia1" class="btns-trivias">Trivia de refranes</button><br>
+        <button onclick="goToTrivia2()" id="btn-trivia2" class="btns-trivias">Trivia de adivinanzas</button><br>
+    </section>
+
+    <section id="trivia1" class="trivias">
+      <h1>Refranes</h1>
+      <p class="preg-1">Camarón que se duerme se lo lleva...</p>
+      <form> 
+        <input type="radio" name="question1" value="optionA" id="correct1-t1">
+         <label class="options"> La corriente</label>
+
+        <input type="radio" name="question1" value="optionB" id="false1-t2">
+         <label class="options"> La policia</label>
+
+        <input type="radio" name="question1" value="optionC" id="false1-t3">
+         <label class="options"> Su mamá</label>
+
+      </form>
+      
+      <p class="preg-1">Al buen entendedor</p>
+      <form> 
+        <input type="radio" name="question2" value="optionA" id="correct2-t1">
+         <label class="options"> Pocas palabras</label>
+
+        <input type="radio" name="question2" value="optionB" id="falset2-t2">
+         <label class="options"> Muchas palabras</label>
+
+        <input type="radio" name="question2" value="optionC" id="falset2-t3">
+         <label class="options"> Le preguntan muchas cosas</label>
+
+        <input type="button" onclick= "comprobacion1()" name="button-t1" value="Checa tus respuestas" class="reload">
+
+         <p id="validation-text"></p>
+      <button onclick="startAgain()" id="reload2" class="reload">Regresar al inicio</button>
+      </form>
+
+    </section>
+
+    <section id="trivia2" class="trivias">
+      <h1>Adivinanzas</h1>
+      <p class="preg-1">Qué es peludito y bonito?</p>
+      <form> 
+        <input type="radio" name="question3" value="optionA" id="correct3-t1">
+         <label class="options"> Un gato</label>
+
+        <input type="radio" name="question3" value="optionB" id="falset3-t2">
+         <label class="options"> Un cocodrilo</label>
+
+        <input type="radio" name="question3" value="optionC" id="falset3-t3">
+         <label class="options"> Ricky Ricón </label>
+      </form>
+      
+      <p class="preg-1">Qué camina en cuatro patas en la mañana, en dos por la tarde, y en 3 por la noche?</p>
+      <form> 
+        <input type="radio" name="question4" value="optionA" id="correct4-t1">
+         <label class="options"> Un pokemon</label>
+
+        <input type="radio" name="question4" value="optionB" id="falset4-t2">
+         <label class="options"> Un dinosaurio</label>
+
+        <input type="radio" name="question4" value="optionC" id="falset4-t3">
+         <label class="options"> Un ser humano </label>
+
+        <input type="button" onclick="comprobacion2()" name="button-t2" value="Checa tus respuestas" class="reload">
+
+         <p id="validation-text2"></p>
+      </form>
+      <button onclick="startAgain()" id="reload2" class="reload">Regresar al inicio</button>
+    </section>
+  </main>
+    <script src="script.js"></script>
+</body>
+</html>
